@@ -8,7 +8,7 @@ date_cover = """
 
 def cover(func, in_data):
     from datetime import date
-    return func(date(*in_data))
+    return func(date(*in_data[0]), date(*in_data[1]))
 
 """
 
