@@ -38,8 +38,14 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 console.log("data is undefined");
                 return false;
             }
+
+            var checkioInput = data.in;
+
+            var strInput = "date(" + checkioInput[0][0] + "," + checkioInput[0][1] + "," + checkioInput[0][2] +
+                "), date(" + checkioInput[1][0] + "," + checkioInput[1][1] + "," + checkioInput[1][2] + ")";
+
             if (data.error) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(data.in) + ')');
+                $content.find('.call').html('Fail: checkio(' + strInput + ')');
                 $content.find('.output').html(data.error.replace(/\n/g, ","));
 
                 $content.find('.output').addClass('error');
@@ -50,7 +56,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var checkioInput = data.in;
+
             var rightResult = data.ext["answer"];
             var userResult = data.out;
             var result = data.ext["result"];
@@ -63,7 +69,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult));
 
             if (!result) {
-                $content.find('.call').html('Fail: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Fail: checkio(' + strInput + ')');
                 $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
