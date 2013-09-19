@@ -76,7 +76,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 $content.find('.call').addClass('error');
             }
             else {
-                $content.find('.call').html('Pass: checkio(' + JSON.stringify(checkioInput) + ')');
+                $content.find('.call').html('Pass: checkio(' + strInput + ')');
                 $content.find('.answer').remove();
             }
             //Dont change the code before it
