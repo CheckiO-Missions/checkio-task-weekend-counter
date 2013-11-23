@@ -94,7 +94,27 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         });
 
-       
+        var $tryit;
+        var inCanvas;
+        var outCanvas;
+//
+        ext.set_console_process_ret(function (this_e, ret) {
+            $tryit.find(".checkio-result").html(ret);
+        });
+
+        ext.set_generate_animation_panel(function (this_e) {
+
+            $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit')));
+
+            $tryit.find('.bn-check').click(function (e) {
+                e.preventDefault();
+
+                this_e.sendToConsoleCheckiO($tryit.find(".start-date").val(), $tryit.find(".end-date").val());
+                e.stopPropagation();
+                return false;
+            });
+
+        });
 
         var colorOrange4 = "#F0801A";
         var colorOrange3 = "#FA8F00";
