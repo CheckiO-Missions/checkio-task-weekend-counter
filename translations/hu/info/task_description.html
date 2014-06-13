@@ -1,0 +1,43 @@
+<p>
+    Zsófia odaadta Önnek a saját időbeosztását valamint vele együtt még két dátumot is, 
+    és azt mondta, hogy meg szeretné tervezni a hétvégéjét. Arra kéri Önt, hogy számolja 
+    meg, hány hétvégi (Szombat, Vasárnap) napja lesz az első dátumtól kezdve az utolsó 
+    dátumid bezárólag. Ha a dátumhatárok szabadnapra esnek, akkor számolja bele azokat is.
+</p>
+
+<p>
+    A <strong>datetime.date</strong> dátumtípusról
+    <a href="http://docs.python.org/2/library/datetime.html#date-objects">itt</a>
+    lehet bővebb információt kapni (angol nyelven). Az eredménynek egy egész számnak kell lennie.
+</p>
+
+<p>
+    <strong>Bemeneti adatok: </strong> a kezdeti és a végső dátum datetime.date formában.
+</p>
+
+<p>
+    <strong>Kimeneti adatok: </strong> a szabadnapok száma e két megadott dátum között egész számként (int).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Példák:</strong>
+    </p>
+    <pre class="brush: python">checkio(date(2013, 9, 18), date(2013, 9, 23)) == 2
+checkio(date(2013, 1, 1), date(2013, 2, 1)) == 8
+checkio(date(2013, 2, 2), date(2013, 2, 3)) == 2
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Alkalmazása: </strong>
+    Ez egy kitűnő alkalom megismerkedni a dátumok használatával. Ezeket a módszereket 
+    gyakran használják a dátumkezelő alkalmazásoknál, az automatikus értesítő rendszereknél 
+    és még sok más hasonló szoftvernél.
+</p>
+
+<p>
+    <strong>Előfeltétel:</strong>
+    start_date &lt; end_date.
+    </p>
