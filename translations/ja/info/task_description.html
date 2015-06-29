@@ -1,0 +1,42 @@
+<p>
+    ソフィアはあなたに予定と二つの日付を与え、週末の計画を建てるのを助けて欲しいとあなたに言いました。
+    彼女はあなたに最初の日付から最後の日付までの休日 (土曜日、日曜日) の数を数えるよう頼みました。
+    あなたは与えられた最初と最後の日付が土曜日または日曜日に含まれるならば、最初と最後の日付を含めて数えなければなりません。
+</p>
+
+<p>
+    日付は <strong>datetime.date</strong>
+    (<a href="http://docs.python.org/2/library/datetime.html#date-objects">このモジュールについてはリンク先を読んでください</a>) 型として与えられます。
+    結果は整数で返します。
+</p>
+
+<p>
+    <strong>入力: </strong> 開始と終了の日付がdatetime.date型で与えられる
+</p>
+
+<p>
+    <strong>出力: </strong> 休日の数を整数で返す
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+    <pre class="brush: python">checkio(date(2013, 9, 18), date(2013, 9, 23)) == 2
+checkio(date(2013, 1, 1), date(2013, 2, 1)) == 8
+checkio(date(2013, 2, 2), date(2013, 2, 3)) == 2
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    日付を操作する方法を学ぶのに、今がいい時期です。
+    ここでのこれらのアイデアはカレンダーアプリ、顧客関係管理ソフトウェア、
+    自動化したメッセージングスケジューラなど多くのものでしばしば出てきます。
+</p>
+
+<p>
+    <strong>事前条件:</strong>
+    start_date &lt; end_date.
+    </p>
