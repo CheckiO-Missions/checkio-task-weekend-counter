@@ -1,0 +1,43 @@
+<p>
+    Sofia vous donne son agenda et deux dates, et vous demande de l'aide pour planifier ses week-ends.
+    Elle vous demande de compter tous les jours de congés (Samedi et Dimanche) qui se trouvent entre 
+    la première et la seconde date, y comprises ces deux dates de début et de fin, si elles tombent Samedi ou Dimanche.
+</p>
+
+<p>
+    Les dates sont données comme <strong>datetime.date</strong>
+    (<a href="http://docs.python.org/2/library/datetime.html#date-objects">En savoir davantage sur ce module ici</a>).
+    Le résultat est un entier.
+</p>
+
+<p>
+    <strong>Input: </strong> Dates de début et de fin, comme datetime.date.
+</p>
+
+<p>
+    <strong>Output: </strong> Le nombre de jours de congé, comme entier (int).
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exemple:</strong>
+    </p>
+    <pre class="brush: python">checkio(date(2013, 9, 18), date(2013, 9, 23)) == 2
+checkio(date(2013, 1, 1), date(2013, 2, 1)) == 8
+checkio(date(2013, 2, 2), date(2013, 2, 3)) == 2
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Application: </strong>
+    C'est l'occasion d'apprendre à manipuler les dates avec Python.
+    Les concepts utilisés sont utiles dans des applications en lien avec le calendrier, telles que
+    des logiciels pour la relation-client en commerce, 
+    des messageries d'agendas automatisés,... 
+</p>
+
+<p>
+    <strong>Préconditions:</strong>
+    start_date &lt; end_date.
+    </p>
